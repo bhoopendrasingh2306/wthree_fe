@@ -31,7 +31,7 @@ const AuthPage = () => {
     // Login or Signup logic based on form state
     try {
       if (isLogin) {
-        const response = await axios.post('http://localhost:5000/user/login', {
+        const response = await axios.post('https://wthree-be.vercel.app/user/login', {
           email: formData.email,
           password: formData.password
         });
@@ -47,7 +47,7 @@ const AuthPage = () => {
           setErrorMessage('Passwords do not match.');
           return;
         }
-        const response = await axios.post('http://localhost:5000/user/signup', {
+        const response = await axios.post('https://wthree-be.vercel.app/user/signup', {
           name: formData.name,
           email: formData.email,
           password: formData.password

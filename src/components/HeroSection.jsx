@@ -15,7 +15,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     
-    axios.get('https://wthree-be.vercel.app/user/referral').then(response => {
+    axios.get('https://wthree-be.onrender.com/user/referral').then(response => {
       console.log("api result", response.data.result);
       setReferrals(response.data.result);
     });

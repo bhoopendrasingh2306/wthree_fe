@@ -31,7 +31,7 @@ const AuthPage = () => {
     // Login or Signup logic based on form state
     try {
       if (isLogin) {
-        const response = await axios.post('https://wthree-be.vercel.app/user/login', {
+        const response = await axios.post('https://wthree-be.onrender.com/user/login', {
           email: formData.email,
           password: formData.password
         });
@@ -47,7 +47,7 @@ const AuthPage = () => {
           setErrorMessage('Passwords do not match.');
           return;
         }
-        const response = await axios.post('https://wthree-be.vercel.app/user/signup', {
+        const response = await axios.post('https://wthree-be.onrender.com/user/signup', {
           name: formData.name,
           email: formData.email,
           password: formData.password
@@ -86,7 +86,7 @@ const AuthPage = () => {
         <h2 className="text-2xl font-bold text-center mb-6">{isLogin ? 'Login' : 'Sign Up'}</h2>
         <p className='text-sm font-semibold'>Sample Login Data</p>
         <p className='text-sm text-blue-500'> Email: user@gmail.com </p>
-        <p className='text-sm text-blue-500 mb-4'>password : user@123</p>
+        <p className='text-sm text-blue-500 mb-4'>password : User@123</p>
         
         {errorMessage && <p className="text-red-500 text-center mb-4">{errorMessage}</p>}
         {successMessage && <p className="text-green-500 text-center mb-4">{successMessage}</p>}
